@@ -53,7 +53,7 @@ function	love.update(dt)
 
 	--[[GAME OVAH MADAFAKA]]
 	for i, pipes in pairs(pipe) do
-		if (((player.x + player.size) < (pipes.x + size)) and ((player.x + player.size) > pipes.x)) or (((player.x - player.size) < (pipes.x + size)) and ((player.x - player.size) > pipes.x)) or player.y > love.graphics.getHeight() then
+		if (((player.x + player.size) < (pipes.x + size)) and ((player.x + player.size) > pipes.x)) or (((player.x - player.size) < (pipes.x + size)) and ((player.x - player.size) > pipes.x)) or player.y > (love.graphics.getHeight() + (player.size * 4)) then
 			if (player.y + player.size) > (pipes.y + size) or (player.y - player.size) < (pipes.y - size) then
 				love.load()
 			end
